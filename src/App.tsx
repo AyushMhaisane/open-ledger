@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard";
 import AddProperty from "./pages/AddProperty";
 import Properties from './pages/Properties';
 import PropertyDetails from './pages/PropertyDetails';
+import Tenants from './pages/Tenants';
 
 import { AuthProvider, useAuth } from "./context/AuthContext";
 
@@ -100,6 +101,10 @@ function App() {
   element={<ProtectedRoute><PropertyDetails /></ProtectedRoute>} 
 />
 
+<Route 
+  path="/tenants" 
+  element={<ProtectedRoute><Tenants /></ProtectedRoute>} 
+/>
           <Route
             path="/properties/new"
             element={

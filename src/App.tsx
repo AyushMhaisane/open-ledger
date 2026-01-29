@@ -7,9 +7,10 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import AddProperty from "./pages/AddProperty";
-import Properties from './pages/Properties';
-import PropertyDetails from './pages/PropertyDetails';
-import Tenants from './pages/Tenants';
+import Properties from "./pages/Properties";
+import PropertyDetails from "./pages/PropertyDetails";
+import Tenants from "./pages/Tenants";
+import AddTenant from "./pages/AddTenant";
 
 import { AuthProvider, useAuth } from "./context/AuthContext";
 
@@ -96,15 +97,32 @@ function App() {
             }
           />
 
-          <Route 
-  path="/properties/:id" 
-  element={<ProtectedRoute><PropertyDetails /></ProtectedRoute>} 
-/>
+          <Route
+            path="/properties/:id"
+            element={
+              <ProtectedRoute>
+                <PropertyDetails />
+              </ProtectedRoute>
+            }
+          />
 
-<Route 
-  path="/tenants" 
-  element={<ProtectedRoute><Tenants /></ProtectedRoute>} 
-/>
+          <Route
+            path="/tenants"
+            element={
+              <ProtectedRoute>
+                <Tenants />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/tenants/new"
+            element={
+              <ProtectedRoute>
+                <AddTenant />
+              </ProtectedRoute>
+            }
+          />
           <Route
             path="/properties/new"
             element={
@@ -114,10 +132,14 @@ function App() {
             }
           />
 
-          <Route 
-  path="/properties" 
-  element={<ProtectedRoute><Properties /></ProtectedRoute>} 
-/>
+          <Route
+            path="/properties"
+            element={
+              <ProtectedRoute>
+                <Properties />
+              </ProtectedRoute>
+            }
+          />
 
           {/* Fallback */}
           <Route path="*" element={<Navigate to="/" replace />} />

@@ -7,6 +7,8 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import AddProperty from "./pages/AddProperty";
+import Properties from './pages/Properties';
+import PropertyDetails from './pages/PropertyDetails';
 
 import { AuthProvider, useAuth } from "./context/AuthContext";
 
@@ -93,6 +95,11 @@ function App() {
             }
           />
 
+          <Route 
+  path="/properties/:id" 
+  element={<ProtectedRoute><PropertyDetails /></ProtectedRoute>} 
+/>
+
           <Route
             path="/properties/new"
             element={
@@ -101,6 +108,11 @@ function App() {
               </ProtectedRoute>
             }
           />
+
+          <Route 
+  path="/properties" 
+  element={<ProtectedRoute><Properties /></ProtectedRoute>} 
+/>
 
           {/* Fallback */}
           <Route path="*" element={<Navigate to="/" replace />} />

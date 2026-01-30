@@ -12,6 +12,7 @@ import PropertyDetails from "./pages/PropertyDetails";
 import Tenants from "./pages/Tenants";
 import AddTenant from "./pages/AddTenant";
 import Finance from "./pages/Finance";
+import CreateInvoice from './pages/CreateInvoice';
 
 
 import { AuthProvider, useAuth } from "./context/AuthContext";
@@ -111,6 +112,11 @@ function App() {
           <Route 
   path="/finance" 
   element={<ProtectedRoute><Finance /></ProtectedRoute>} 
+/>
+
+<Route 
+  path="/finance/new" 
+  element={<ProtectedRoute><CreateInvoice /></ProtectedRoute>} 
 />
 
           <Route

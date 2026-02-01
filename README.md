@@ -7,7 +7,7 @@ OpenLedger is a modern, full-stack property management solution designed for lan
 ## 🚀 Features
 
 - **📊 Smart Dashboard:** Real-time overview of occupancy rates, pending dues, and active properties.
-- **mj🏢 Property Management:** specific hierarchy for Buildings -> Units (Flats/Rooms).
+- **🏢 Property Management:** specific hierarchy for Buildings -> Units (Flats/Rooms).
 - **👥 Tenant Portal:** Track tenant details, lease dates, and unit assignments.
 - **💸 Finance & Billing:**
   - Create invoices with auto-filled rent amounts.

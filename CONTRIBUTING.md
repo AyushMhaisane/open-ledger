@@ -1,7 +1,3 @@
-Since you are an open-source enthusiast, this file is crucial. It tells other developers how they can help you build this.
-
-Create a file named `CONTRIBUTING.md` in the root folder:
-
 ```markdown
 # Contributing to OpenLedger
 
